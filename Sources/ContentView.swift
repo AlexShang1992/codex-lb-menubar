@@ -65,6 +65,14 @@ struct ContentView: View {
             }
             Spacer()
             Button {
+                openChatGPT()
+            } label: {
+                Image(systemName: "message")
+            }
+            .buttonStyle(.borderless)
+            .help("打开 ChatGPT")
+
+            Button {
                 NSWorkspace.shared.open(Config.accountsPage)
             } label: {
                 Image(systemName: "arrow.up.right.square")
@@ -121,6 +129,20 @@ struct ContentView: View {
                 .foregroundStyle(.secondary)
         }
         .frame(maxHeight: .infinity)
+    }
+
+    /// Launch the ChatGPT desktop app (falls back to its default install path).
+    private func openChatGPT() {
+        let ws = NSWorkspace.shared
+        let config = NSWorkspace.OpenConfiguration()
+        if let url = ws.urlForApplication(withBundleIdentifier: "com.openai.codex") {
+            ws.openApplication(at: url, configuration: config)
+            return
+        }
+        let fallback = URL(fileURLWithPath: "/Applications/ChatGPT.app")
+        if FileManager.default.fileExists(atPath: fallback.path) {
+            ws.openApplication(at: fallback, configuration: config)
+        }
     }
 
     static let timeFormatter: DateFormatter = {

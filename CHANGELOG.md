@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-07-24
+
+### Added
+
+- Footer button to launch the ChatGPT desktop app (bundle id `com.openai.codex`,
+  with a fallback to `/Applications/ChatGPT.app`).
+- Drag-to-install **DMG** packaging (`make-dmg.sh`, `make dmg`); releases now
+  publish `CodexBar.dmg` alongside `CodexBar.app.zip`.
+
 ## [1.0.0] - 2026-07-24
 
 ### Added
@@ -24,5 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Headless `--selftest` mode for CI/debugging.
 - `make` targets and build scripts requiring only the Command Line Tools.
 
-[Unreleased]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/AlexShang1992/codex-lb-menubar/releases/tag/v1.0.0
