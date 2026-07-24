@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `make screenshots` renders privacy-safe popover screenshots (mock data,
+  off-screen via `Tools/MakeScreenshot.swift`) and the README now embeds them.
+
 ## [1.0.2] - 2026-07-24
 
 ### Changed

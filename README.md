@@ -41,9 +41,14 @@ the Xcode Command Line Tools.
 
 ## Screenshots
 
-|                 Menu-bar icon                  |            Popover             |
-| :--------------------------------------------: | :----------------------------: |
-| <img src="docs/menubar-icon.png" width="120"/> | one card per account, live data |
+A single icon sits in the menu bar (<img src="docs/menubar-icon.png" height="18"/>);
+clicking it opens the popover:
+
+|                     Dark                     |                     Light                     |
+| :------------------------------------------: | :-------------------------------------------: |
+| <img src="docs/screenshot-dark.png" width="340"/> | <img src="docs/screenshot-light.png" width="340"/> |
+
+<sub>Rendered from the app with mock data via `make screenshots`.</sub>
 
 ## Requirements
 

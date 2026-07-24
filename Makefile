@@ -3,7 +3,7 @@
 
 APP := CodexBar.app
 
-.PHONY: all build icons dmg run selftest clean
+.PHONY: all build icons dmg screenshots run selftest clean
 
 all: build ## Build the app bundle (default)
 
@@ -15,6 +15,9 @@ icons: ## Regenerate menu-bar and app icons into Resources/
 
 dmg: build ## Package a drag-to-install CodexBar.dmg into dist/
 	./make-dmg.sh
+
+screenshots: ## Render docs/ popover screenshots (mock data, off-screen)
+	./make-screenshots.sh
 
 run: build ## Build then launch the app
 	open ./$(APP)
