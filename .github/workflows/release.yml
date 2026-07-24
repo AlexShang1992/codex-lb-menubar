@@ -18,9 +18,10 @@ jobs:
       - name: Build app bundle
         run: ./build.sh
 
-      - name: Package
+      - name: Package (.dmg + .zip)
         run: |
           mkdir -p dist
+          ./make-dmg.sh
           ditto -c -k --sequesterRsrc --keepParent CodexBar.app dist/CodexBar.app.zip
           shasum -a 256 dist/CodexBar.app.zip | tee dist/CodexBar.app.zip.sha256
 
@@ -30,5 +31,7 @@ jobs:
           draft: false
           generate_release_notes: true
           files: |
+            dist/CodexBar.dmg
+            dist/CodexBar.dmg.sha256
             dist/CodexBar.app.zip
             dist/CodexBar.app.zip.sha256

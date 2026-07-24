@@ -52,14 +52,16 @@ CodexBar 以一个图标常驻菜单栏。点击即弹出简洁的卡片列表�
 
 ### 方式 A —— 下载 Release
 
-1. 从 [Releases](https://github.com/AlexShang1992/codex-lb-menubar/releases) 下载最新的
-   `CodexBar.app.zip`。
-2. 解压后把 `CodexBar.app` 拖到 `/Applications`。
+1. 从 [Releases](https://github.com/AlexShang1992/codex-lb-menubar/releases) 下载
+   **`CodexBar.dmg`**。
+2. 打开后把 **CodexBar** 拖到 **Applications** 即可安装。
 3. 由于是 ad-hoc 签名（未公证），首次启动需右键 → **打开**，或执行一次：
 
    ```sh
    xattr -dr com.apple.quarantine /Applications/CodexBar.app
    ```
+
+> 如果你更喜欢压缩包，Release 里也附了 `CodexBar.app.zip`。
 
 ### 方式 B —— 从源码构建
 

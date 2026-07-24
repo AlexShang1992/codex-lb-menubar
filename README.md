@@ -57,15 +57,17 @@ the Xcode Command Line Tools.
 
 ### Option A — Download a release
 
-1. Grab the latest `CodexBar.app.zip` from the
+1. Download **`CodexBar.dmg`** from the
    [Releases](https://github.com/AlexShang1992/codex-lb-menubar/releases) page.
-2. Unzip and move `CodexBar.app` to `/Applications`.
-3. Because the build is ad-hoc signed (not notarized), the first launch needs a
-   right-click → **Open**, or run once:
+2. Open it and drag **CodexBar** onto **Applications**.
+3. Because the build is ad-hoc signed (not notarized), clear quarantine once
+   (or right-click the app → **Open** on first launch):
 
    ```sh
    xattr -dr com.apple.quarantine /Applications/CodexBar.app
    ```
+
+> A plain `CodexBar.app.zip` is also attached if you prefer.
 
 ### Option B — Build from source
 
