@@ -7,11 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-07-24
+
 ### Changed
 
-- The "open ChatGPT" footer button now uses a cloud + `>_` terminal icon
-  (rendered by `Tools/MakeIcon.swift` via the new `term` glyph) instead of a
-  generic chat symbol.
+- Header now shows the CodexBar "LB" cloud icon instead of a gauge symbol.
+- The footer "open Codex" control is now a labelled pill (icon + **打开 Codex**)
+  using a cloud + `>_` terminal icon (new `term` glyph in `Tools/MakeIcon.swift`),
+  rendered in full colour.
 
 ## [1.0.1] - 2026-07-24
 
@@ -39,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Headless `--selftest` mode for CI/debugging.
 - `make` targets and build scripts requiring only the Command Line Tools.
 
-[Unreleased]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/AlexShang1992/codex-lb-menubar/releases/tag/v1.0.0

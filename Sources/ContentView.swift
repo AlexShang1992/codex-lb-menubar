@@ -35,8 +35,16 @@ struct ContentView: View {
 
     private var header: some View {
         HStack(spacing: 8) {
-            Image(systemName: "gauge.medium")
-                .foregroundStyle(.secondary)
+            if let icon = NSImage(named: "MenuIcon") {
+                Image(nsImage: icon)
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 18)
+            } else {
+                Image(systemName: "gauge.medium")
+                    .foregroundStyle(.secondary)
+            }
             Text("Accounts")
                 .font(.headline)
             if vm.isLoading {
@@ -67,16 +75,21 @@ struct ContentView: View {
             Button {
                 openChatGPT()
             } label: {
-                if let icon = NSImage(named: "ChatGPTIcon") {
-                    Image(nsImage: icon)
-                        .resizable()
-                        .frame(width: 18, height: 18)
-                } else {
-                    Image(systemName: "message")
+                HStack(spacing: 5) {
+                    if let icon = NSImage(named: "ChatGPTIcon") {
+                        Image(nsImage: icon)
+                            .renderingMode(.original)   // keep full colour, not tinted white
+                            .resizable()
+                            .frame(width: 16, height: 16)
+                    } else {
+                        Image(systemName: "message")
+                    }
+                    Text("打开 Codex").font(.caption).fontWeight(.medium)
                 }
             }
-            .buttonStyle(.borderless)
-            .help("打开 ChatGPT")
+            .buttonStyle(.bordered)
+            .controlSize(.small)
+            .help("打开 Codex 应用")
 
             Button {
                 NSWorkspace.shared.open(Config.accountsPage)
