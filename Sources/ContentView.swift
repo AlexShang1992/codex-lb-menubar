@@ -67,7 +67,13 @@ struct ContentView: View {
             Button {
                 openChatGPT()
             } label: {
-                Image(systemName: "message")
+                if let icon = NSImage(named: "ChatGPTIcon") {
+                    Image(nsImage: icon)
+                        .resizable()
+                        .frame(width: 18, height: 18)
+                } else {
+                    Image(systemName: "message")
+                }
             }
             .buttonStyle(.borderless)
             .help("打开 ChatGPT")

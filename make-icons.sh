@@ -15,6 +15,9 @@ swiftc -O -framework AppKit "$DIR/Tools/MakeIcon.swift" -o "$TMP/makeicon"
 echo "==> Menu-bar icon"
 "$TMP/makeicon" "$RES/MenuIcon.png" 176 bar
 
+echo "==> ChatGPT launcher button icon (cloud + terminal prompt)"
+"$TMP/makeicon" "$RES/ChatGPTIcon.png" 256 app term
+
 echo "==> App iconset"
 ICONSET="$TMP/AppIcon.iconset"
 mkdir -p "$ICONSET"
