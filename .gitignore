@@ -1,0 +1,24 @@
+# Build output
+CodexBar.app/
+build/
+dist/
+*.o
+*.swiftmodule
+
+# Icon build scratch
+*.iconset/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Editor / IDE
+.vscode/
+.idea/
+*.xcuserstate
+xcuserdata/
+
+# Misc
+*.log

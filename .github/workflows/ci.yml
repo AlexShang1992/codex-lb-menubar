@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build (macOS)
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: swift --version
+
+      - name: Build app bundle
+        run: ./build.sh
+
+      - name: Verify bundle
+        run: |
+          test -x "CodexBar.app/Contents/MacOS/CodexBar"
+          test -f "CodexBar.app/Contents/Info.plist"
+          test -f "CodexBar.app/Contents/Resources/AppIcon.icns"
+          codesign --verify --deep --strict "CodexBar.app"
+          echo "Bundle OK"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CodexBar-app
+          path: CodexBar.app

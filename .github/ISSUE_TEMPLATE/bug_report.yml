@@ -1,0 +1,45 @@
+name: Bug report
+description: Report a problem with CodexBar
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to file a bug! Please fill in the details below.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected instead.
+      placeholder: The popover shows "connection failed" even though codex-lb is running…
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Launch CodexBar
+        2. Click the menu-bar icon
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "14.5"
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: CodexBar version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: selftest
+    attributes:
+      label: "`make selftest` output"
+      description: Run `make selftest` and paste the output (redact account emails if needed).
+      render: shell
