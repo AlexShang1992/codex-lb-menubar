@@ -21,4 +21,7 @@ enum Config {
 
     /// Web dashboard opened by the "open in browser" button.
     static var accountsPage: URL { baseURL.appendingPathComponent("accounts") }
+
+    /// This project's GitHub repository, opened by the footer GitHub button.
+    static let repoURL = URL(string: "https://github.com/AlexShang1992/codex-lb-menubar")!
 }

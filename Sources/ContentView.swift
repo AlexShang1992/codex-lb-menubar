@@ -62,7 +62,7 @@ struct ContentView: View {
     }
 
     private var footer: some View {
-        HStack(spacing: 10) {
+        HStack(spacing: 7) {
             if let d = vm.lastUpdated {
                 Text("更新于 \(Self.timeFormatter.string(from: d))")
                     .font(.caption2)
@@ -100,6 +100,22 @@ struct ContentView: View {
             .help("在浏览器打开 accounts 页面")
 
             Button {
+                NSWorkspace.shared.open(Config.repoURL)
+            } label: {
+                if let gh = NSImage(named: "GitHubIcon") {
+                    Image(nsImage: gh)
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(width: 15, height: 15)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Image(systemName: "chevron.left.forwardslash.chevron.right")
+                }
+            }
+            .buttonStyle(.borderless)
+            .help("GitHub 项目主页")
+
+            Button {
                 vm.refresh()
             } label: {
                 Image(systemName: "arrow.clockwise")
@@ -113,7 +129,7 @@ struct ContentView: View {
             .buttonStyle(.borderless)
             .foregroundStyle(.secondary)
         }
-        .padding(.horizontal, 14)
+        .padding(.horizontal, 12)
         .padding(.vertical, 8)
     }
 
@@ -272,9 +288,9 @@ struct ProgressBar: View {
     }
 
     private var barColor: Color {
-        // amber like the reference; nudges toward red when nearly empty
-        if fraction <= 0.1 { return .red }
-        return Color(red: 0.95, green: 0.62, blue: 0.11)
+        // green when healthy; red warning when nearly empty
+        if fraction <= 0.1 { return Color(red: 0.90, green: 0.30, blue: 0.24) }
+        return Color(red: 0.27, green: 0.78, blue: 0.53)
     }
 }
 

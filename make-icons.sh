@@ -18,6 +18,9 @@ echo "==> Menu-bar icon"
 echo "==> ChatGPT launcher button icon (cloud + terminal prompt)"
 "$TMP/makeicon" "$RES/ChatGPTIcon.png" 256 app term
 
+echo "==> GitHub mark (template, for the repo button)"
+"$TMP/makeicon" "$RES/GitHubIcon.png" 176 github
+
 echo "==> App iconset"
 ICONSET="$TMP/AppIcon.iconset"
 mkdir -p "$ICONSET"

@@ -9,8 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Footer button that opens the project's GitHub repository, using a real GitHub
+  mark rendered from the Octicons SVG path (new `github` mode in `MakeIcon`).
 - `make screenshots` renders privacy-safe popover screenshots (mock data,
   off-screen via `Tools/MakeScreenshot.swift`) and the README now embeds them.
+
+### Changed
+
+- Weekly-usage bar is now green (with a red warning only when nearly empty).
 
 ## [1.0.2] - 2026-07-24
 

@@ -19,8 +19,11 @@ struct MakeScreenshot {
         app.appearance = appearance
 
         // Register bundled icons under the names ContentView looks up.
-        for name in ["MenuIcon", "ChatGPTIcon"] {
-            if let img = NSImage(contentsOfFile: "Resources/\(name).png") { img.setName(name) }
+        for name in ["MenuIcon", "ChatGPTIcon", "GitHubIcon"] {
+            if let img = NSImage(contentsOfFile: "Resources/\(name).png") {
+                if name == "GitHubIcon" { img.isTemplate = true }
+                img.setName(name)
+            }
         }
 
         // Mocked accounts (fake emails/ids).
