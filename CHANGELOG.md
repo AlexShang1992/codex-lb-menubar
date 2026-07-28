@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-07-28
+
 ### Changed
 
 - Reset countdown now includes minutes (e.g. `Reset in 6d 21h 34m`) so small
@@ -60,7 +62,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Headless `--selftest` mode for CI/debugging.
 - `make` targets and build scripts requiring only the Command Line Tools.
 
-[Unreleased]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.4...HEAD
+[1.0.4]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/AlexShang1992/codex-lb-menubar/compare/v1.0.0...v1.0.1
