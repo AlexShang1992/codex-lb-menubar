@@ -88,7 +88,7 @@ struct Account: Codable, Identifiable {
         let days = Int(secs) / 86_400
         let hours = (Int(secs) % 86_400) / 3_600
         let mins = (Int(secs) % 3_600) / 60
-        if days > 0 { return "Reset in \(days)d \(hours)h" }
+        if days > 0 { return "Reset in \(days)d \(hours)h \(mins)m" }
         if hours > 0 { return "Reset in \(hours)h \(mins)m" }
         return "Reset in \(mins)m"
     }

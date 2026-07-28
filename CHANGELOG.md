@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Reset countdown now includes minutes (e.g. `Reset in 6d 21h 34m`) so small
+  changes are visible at a glance.
+
 ## [1.0.3] - 2026-07-28
 
 ### Added

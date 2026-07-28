@@ -42,7 +42,7 @@ CodexBar 以一个图标常驻菜单栏。点击即弹出简洁的卡片列表�
 
 |                     暗色                     |                     亮色                      |
 | :------------------------------------------: | :-------------------------------------------: |
-| <img src="docs/screenshot-dark.png?v=1.0.3" width="340"/> | <img src="docs/screenshot-light.png?v=1.0.3" width="340"/> |
+| <img src="docs/screenshot-dark.png?v=1.0.4" width="340"/> | <img src="docs/screenshot-light.png?v=1.0.4" width="340"/> |
 
 <sub>由 `make screenshots` 用脱敏假数据从真实界面渲染。</sub>
 

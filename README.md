@@ -46,7 +46,7 @@ clicking it opens the popover:
 
 |                     Dark                     |                     Light                     |
 | :------------------------------------------: | :-------------------------------------------: |
-| <img src="docs/screenshot-dark.png?v=1.0.3" width="340"/> | <img src="docs/screenshot-light.png?v=1.0.3" width="340"/> |
+| <img src="docs/screenshot-dark.png?v=1.0.4" width="340"/> | <img src="docs/screenshot-light.png?v=1.0.4" width="340"/> |
 
 <sub>Rendered from the app with mock data via `make screenshots`.</sub>
 
